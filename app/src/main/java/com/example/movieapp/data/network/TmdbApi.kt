@@ -1,6 +1,7 @@
 package com.example.movieapp.data.network
 
 import com.example.movieapp.data.model.MovieResponse
+import com.example.movieapp.data.model.MovieDto
 import retrofit2.http.GET
 import retrofit2.http.Query
 

@@ -9,6 +9,11 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.example.movieapp.ui.theme.MovieAppTheme
 import dagger.hilt.android.AndroidEntryPoint
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import androidx.navigation.NavType
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -21,13 +26,13 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    val navController = androidx.navigation.compose.rememberNavController()
+                    val navController = rememberNavController()
                     
-                    androidx.navigation.compose.NavHost(
+                    NavHost(
                         navController = navController,
                         startDestination = com.example.movieapp.ui.navigation.Screen.Splash.route
                     ) {
-                        androidx.navigation.compose.composable(com.example.movieapp.ui.navigation.Screen.Splash.route) {
+                        composable(com.example.movieapp.ui.navigation.Screen.Splash.route) {
                             com.example.movieapp.ui.screens.SplashScreen {
                                 navController.navigate(com.example.movieapp.ui.navigation.Screen.Home.route) {
                                     popUpTo(com.example.movieapp.ui.navigation.Screen.Splash.route) { inclusive = true }
@@ -35,7 +40,7 @@ class MainActivity : ComponentActivity() {
                             }
                         }
                         
-                        androidx.navigation.compose.composable(com.example.movieapp.ui.navigation.Screen.Home.route) {
+                        composable(com.example.movieapp.ui.navigation.Screen.Home.route) {
                             com.example.movieapp.ui.screens.HomeScreen(
                                 onMovieClick = { movieId ->
                                     navController.navigate(com.example.movieapp.ui.navigation.Screen.Details.createRoute(movieId))
@@ -43,9 +48,9 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         
-                        androidx.navigation.compose.composable(
+                        composable(
                             route = com.example.movieapp.ui.navigation.Screen.Details.route,
-                            arguments = listOf(androidx.navigation.navArgument("movieId") { type = androidx.navigation.NavType.IntType })
+                            arguments = listOf(navArgument("movieId") { type = NavType.IntType })
                         ) {
                            com.example.movieapp.ui.screens.MovieDetailsScreen(
                                onBackClick = { navController.popBackStack() }

@@ -26,7 +26,7 @@ object NotificationHelper {
         createNotificationChannel(context)
 
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(R.mipmap.ic_launcher_round) // Fallback icon
+            .setSmallIcon(R.drawable.ic_launcher) // Fallback icon
             .setContentTitle("Movie is Playing")
             .setContentText("Now playing: $movieTitle")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
