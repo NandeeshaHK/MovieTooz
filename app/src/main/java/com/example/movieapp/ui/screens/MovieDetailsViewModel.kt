@@ -26,13 +26,13 @@ class MovieDetailsViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
-    private val movieId: String? = savedStateHandle["movieId"]
+    private val movieId: Int? = savedStateHandle["movieId"]
     
     private val _uiState = MutableStateFlow(MovieDetailsUiState())
     val uiState: StateFlow<MovieDetailsUiState> = _uiState.asStateFlow()
 
     init {
-        movieId?.toIntOrNull()?.let { loadGameDetails(it) }
+        movieId?.let { loadGameDetails(it) }
     }
 
     private fun loadGameDetails(id: Int) {
@@ -52,7 +52,7 @@ class MovieDetailsViewModel @Inject constructor(
                 _uiState.update { it.copy(isLoading = false, movie = entity) }
             } else {
                 // If API fails, try to get from DB if it exists?
-                val dbEntity = repository.getFavourites() // accessing flow... hard to get single value synchronously
+                // accessing flow... hard to get single value synchronously
                 // Simplified: Just use API error for now or basic DB check
                  _uiState.update { it.copy(isLoading = false, error = apiResult.exceptionOrNull()?.message) }
             }

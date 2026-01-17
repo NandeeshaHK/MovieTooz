@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color ic_launcher_background
 color purple_200
 color purple_500
 color purple_700
@@ -10,5 +11,14 @@ color white
 drawable ic_launcher
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable movie_logo
+drawable splash_logo
+id splashAnimation
+id staticLogo
+layout activity_splash
+mipmap ic_launcher
+mipmap ic_launcher_round
 string app_name
 style Theme.MovieApp
+style Theme.MovieTooz
+style Theme.MovieTooz.Main

@@ -30,15 +30,8 @@ class MainActivity : ComponentActivity() {
                     
                     NavHost(
                         navController = navController,
-                        startDestination = com.example.movieapp.ui.navigation.Screen.Splash.route
+                        startDestination = com.example.movieapp.ui.navigation.Screen.Home.route
                     ) {
-                        composable(com.example.movieapp.ui.navigation.Screen.Splash.route) {
-                            com.example.movieapp.ui.screens.SplashScreen {
-                                navController.navigate(com.example.movieapp.ui.navigation.Screen.Home.route) {
-                                    popUpTo(com.example.movieapp.ui.navigation.Screen.Splash.route) { inclusive = true }
-                                }
-                            }
-                        }
                         
                         composable(com.example.movieapp.ui.navigation.Screen.Home.route) {
                             com.example.movieapp.ui.screens.HomeScreen(

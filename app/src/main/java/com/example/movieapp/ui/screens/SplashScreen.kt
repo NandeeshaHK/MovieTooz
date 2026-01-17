@@ -26,10 +26,11 @@ fun SplashScreen(onTimeout: () -> Unit) {
         contentAlignment = Alignment.Center
     ) {
         // Using a generic icon as placeholder for "local_asset"
-        Icon(
-            imageVector = Icons.Default.Movie,
+        // Display the innovative splash logo
+        Image(
+            painter = androidx.compose.ui.res.painterResource(id = com.example.movieapp.R.drawable.splash_logo),
             contentDescription = "Logo",
-            modifier = Modifier.size(120.dp)
+            modifier = Modifier.size(250.dp)
         )
     }
 }

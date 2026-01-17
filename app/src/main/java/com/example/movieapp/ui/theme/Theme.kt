@@ -16,22 +16,36 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = AccentCyan,
+    secondary = NeutralGrey,
+    tertiary = AccentCyan,
+    background = PrimaryDark,
+    surface = PrimaryDark,
+    onPrimary = PrimaryDark,
+    onSecondary = White,
+    onTertiary = PrimaryDark,
+    onBackground = White,
+    onSurface = White
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+    primary = AccentCyan,
+    secondary = NeutralGrey,
+    tertiary = AccentCyan,
+    background = White,
+    surface = White,
+    onPrimary = White,
+    onSecondary = PrimaryDark,
+    onTertiary = White,
+    onBackground = PrimaryDark,
+    onSurface = PrimaryDark
 )
 
 @Composable
 fun MovieAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    // Disable dynamic color to enforce MovieTooz Brand
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
@@ -41,7 +55,7 @@ fun MovieAppTheme(
         }
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
-    }
+    } // Force dark theme? For now let's stick to system but with our palette.
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
