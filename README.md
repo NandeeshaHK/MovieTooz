@@ -40,6 +40,20 @@ A modern Android application built with Kotlin and Jetpack Compose for browsing 
     - Click the **Run** button (green play triangle) or press `Shift + F10`.
     - The compiled APK will be installed and launched on the device.
 
+## Installing Built APK
+
+If you have a built release APK (e.g., `app-release.apk`) and encounter issues installing it using the native Android installer:
+
+1.  **Download Split APKs Installer (SAI)**: Install the SAI-Split APKs Installer app from the Google Play Store on your Android device.
+2.  **Open SAI**: Launch the application.
+3.  **Install APK**:
+    - Tap on "Install APKs".
+    - Select "System file picker" (or your preferred file manager).
+    - Navigate to and select the `app-release.apk` file.
+    - Follow the on-screen prompts to complete the installation.
+
+This method is particularly useful if the native installer fails with generic errors.
+
 ## Assumptions and Dependencies
 
 ### Assumptions
@@ -62,4 +76,6 @@ This project relies on the following key libraries and tools:
 -   **Target SDK**: API 34 (Android 14)
 
 ## Credits
-Data provided by [The Movie Database (TMDB)](https://www.themoviedb.org/).
+
+## Release Notes
+See [RELEASE_NOTES.md](RELEASE_NOTES.md) for version history.
