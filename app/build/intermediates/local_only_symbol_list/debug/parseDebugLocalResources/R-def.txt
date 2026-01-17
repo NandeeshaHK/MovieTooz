@@ -11,11 +11,6 @@ color white
 drawable ic_launcher
 drawable ic_launcher_background
 drawable ic_launcher_foreground
-drawable movie_logo
-drawable splash_logo
-id splashAnimation
-id staticLogo
-layout activity_splash
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name

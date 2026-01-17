@@ -40,6 +40,9 @@ MERGED from [androidx.compose.ui:ui-graphics-android:1.6.6] C:\Users\nande\.grad
 MERGED from [androidx.compose.ui:ui-test-manifest:1.6.6] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\eb7db4d4f17e4bb7695293912eb9d7aa\transformed\jetified-ui-test-manifest-1.6.6\AndroidManifest.xml:17:1-28:12
 MERGED from [com.google.dagger:hilt-android:2.50] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\5acbb2659139fa92041f8cabcd25c2bf\transformed\jetified-hilt-android-2.50\AndroidManifest.xml:16:1-19:12
 MERGED from [androidx.fragment:fragment:1.5.1] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\c5be343c21313a7334d3ca27512ff87d\transformed\fragment-1.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.palette:palette-ktx:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\7dde825435dc4a131843fbed9660be14\transformed\jetified-palette-ktx-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.palette:palette:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\bbaf2ec6da21b1fc6989c7d04b687359\transformed\palette-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\b0f9329d1ae4fe0444c620b6b6a7dcce\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\11e945ccd95f1f08a65a8773d619aaf3\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\3ddd9ade9e2c9de4fddd0f64b94b97f2\transformed\jetified-emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\509c680ddfaecea543f1f06864dd4534\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
@@ -84,6 +87,9 @@ MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\nande\.g
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\031ca6c1c37932fc50aa12531351a443\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\9dd44c959a7cc31331ba3f3b626937fb\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.exifinterface:exifinterface:1.3.7] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\46afc9621d8ad8eb389196a40efd81c4\transformed\exifinterface-1.3.7\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\75b71cfc27591de97ec0f30a9723fc91\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\cafdcc24400164d244677f2040ab2c8e\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\be94997031258fcdaf6fb705c3f48047\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.50] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\6c18f0c61d190c66ddfafa9876a61d03\transformed\jetified-dagger-lint-aar-2.50\AndroidManifest.xml:16:1-19:12
 	package
 		INJECTED from B:\MovieApk\MovieApp\app\src\main\AndroidManifest.xml
@@ -248,6 +254,12 @@ MERGED from [com.google.dagger:hilt-android:2.50] C:\Users\nande\.gradle\caches\
 MERGED from [com.google.dagger:hilt-android:2.50] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\5acbb2659139fa92041f8cabcd25c2bf\transformed\jetified-hilt-android-2.50\AndroidManifest.xml:18:3-42
 MERGED from [androidx.fragment:fragment:1.5.1] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\c5be343c21313a7334d3ca27512ff87d\transformed\fragment-1.5.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.5.1] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\c5be343c21313a7334d3ca27512ff87d\transformed\fragment-1.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.palette:palette-ktx:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\7dde825435dc4a131843fbed9660be14\transformed\jetified-palette-ktx-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette-ktx:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\7dde825435dc4a131843fbed9660be14\transformed\jetified-palette-ktx-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\bbaf2ec6da21b1fc6989c7d04b687359\transformed\palette-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.palette:palette:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\bbaf2ec6da21b1fc6989c7d04b687359\transformed\palette-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\b0f9329d1ae4fe0444c620b6b6a7dcce\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\b0f9329d1ae4fe0444c620b6b6a7dcce\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\11e945ccd95f1f08a65a8773d619aaf3\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\11e945ccd95f1f08a65a8773d619aaf3\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\3ddd9ade9e2c9de4fddd0f64b94b97f2\transformed\jetified-emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
@@ -336,6 +348,12 @@ MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\nande\.gradle\caches\9.0-m
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\9dd44c959a7cc31331ba3f3b626937fb\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.exifinterface:exifinterface:1.3.7] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\46afc9621d8ad8eb389196a40efd81c4\transformed\exifinterface-1.3.7\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.exifinterface:exifinterface:1.3.7] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\46afc9621d8ad8eb389196a40efd81c4\transformed\exifinterface-1.3.7\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\75b71cfc27591de97ec0f30a9723fc91\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\75b71cfc27591de97ec0f30a9723fc91\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\cafdcc24400164d244677f2040ab2c8e\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\cafdcc24400164d244677f2040ab2c8e\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\be94997031258fcdaf6fb705c3f48047\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\be94997031258fcdaf6fb705c3f48047\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.dagger:dagger-lint-aar:2.50] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\6c18f0c61d190c66ddfafa9876a61d03\transformed\jetified-dagger-lint-aar-2.50\AndroidManifest.xml:18:3-42
 MERGED from [com.google.dagger:dagger-lint-aar:2.50] C:\Users\nande\.gradle\caches\9.0-milestone-1\transforms\6c18f0c61d190c66ddfafa9876a61d03\transformed\jetified-dagger-lint-aar-2.50\AndroidManifest.xml:18:3-42
 	android:targetSdkVersion

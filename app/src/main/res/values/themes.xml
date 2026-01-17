@@ -8,7 +8,6 @@
     <!-- Splash Screen Theme -->
     <style name="Theme.MovieTooz" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">#121212</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/movie_logo</item>
         <item name="postSplashScreenTheme">@style/Theme.MovieTooz.Main</item>
     </style>
 

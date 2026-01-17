@@ -17,6 +17,7 @@ import javax.inject.Inject
 data class MovieDetailsUiState(
     val isLoading: Boolean = false,
     val movie: MovieEntity? = null,
+    val recommendations: List<MovieEntity> = emptyList(),
     val error: String? = null
 )
 
@@ -32,16 +33,12 @@ class MovieDetailsViewModel @Inject constructor(
     val uiState: StateFlow<MovieDetailsUiState> = _uiState.asStateFlow()
 
     init {
-        movieId?.let { loadGameDetails(it) }
+        movieId?.let { loadMovieDetails(it) }
     }
 
-    private fun loadGameDetails(id: Int) {
+    private fun loadMovieDetails(id: Int) {
         viewModelScope.launch {
             _uiState.update { it.copy(isLoading = true, error = null) }
-            
-            // Check if it is in DB first to get fav status immediately?
-            // But we want fresh details.
-            // We should fetch from API, and then check DB status.
             
             val apiResult = repository.getMovieDetails(id)
             if (apiResult.isSuccess) {
@@ -49,11 +46,16 @@ class MovieDetailsViewModel @Inject constructor(
                 val isFav = repository.isFavourite(id)
                 val isWatch = repository.isWatchlist(id)
                 val entity = dto.toEntity(isFav, isWatch)
-                _uiState.update { it.copy(isLoading = false, movie = entity) }
+                
+                val recommendationsResult = repository.getRecommendations(id)
+                val recommendations = if (recommendationsResult.isSuccess) {
+                    recommendationsResult.getOrThrow().map { it.toEntity(isFav = false, isWatch = false) }
+                } else {
+                    emptyList()
+                }
+
+                _uiState.update { it.copy(isLoading = false, movie = entity, recommendations = recommendations) }
             } else {
-                // If API fails, try to get from DB if it exists?
-                // accessing flow... hard to get single value synchronously
-                // Simplified: Just use API error for now or basic DB check
                  _uiState.update { it.copy(isLoading = false, error = apiResult.exceptionOrNull()?.message) }
             }
         }

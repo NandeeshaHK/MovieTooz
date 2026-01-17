@@ -8,7 +8,7 @@ public final class BuildConfig {
   public static final String APPLICATION_ID = "com.example.movieapp";
   public static final String BUILD_TYPE = "debug";
   public static final int VERSION_CODE = 1;
-  public static final String VERSION_NAME = "1.0";
+  public static final String VERSION_NAME = "1.1";
   // Field from default config.
   public static final String TMDB_API_KEY = "c2693a87b633a7f1869d8fd7d1e6a765";
 }

@@ -33,6 +33,15 @@ import coil.request.ImageRequest
 import com.example.movieapp.data.model.MovieDto
 import com.example.movieapp.data.local.MovieEntity
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
+import androidx.compose.ui.graphics.graphicsLayer
+
 @Composable
 fun MovieCard(
     movie: MovieEntity,
@@ -41,9 +50,31 @@ fun MovieCard(
     onWatchlistClick: (MovieEntity) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    var isVisible by remember { mutableStateOf(false) }
+    
+    LaunchedEffect(Unit) {
+        isVisible = true
+    }
+
+    val alpha by animateFloatAsState(
+        targetValue = if (isVisible) 1f else 0f,
+        animationSpec = tween(durationMillis = 500),
+        label = "alpha"
+    )
+    val scale by animateFloatAsState(
+        targetValue = if (isVisible) 1f else 0.9f,
+        animationSpec = tween(durationMillis = 500),
+        label = "scale"
+    )
+
     Card(
         modifier = modifier
             .padding(8.dp)
+            .graphicsLayer {
+                this.alpha = alpha
+                this.scaleX = scale
+                this.scaleY = scale
+            }
             .clickable { onMovieClick(movie.id) }
             .fillMaxWidth(),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),

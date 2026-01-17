@@ -13,6 +13,7 @@ import com.example.movieapp.data.network.TmdbApi;
 import com.example.movieapp.data.repository.MovieRepository;
 import com.example.movieapp.di.DatabaseModule_ProvideAppDatabaseFactory;
 import com.example.movieapp.di.DatabaseModule_ProvideMovieDaoFactory;
+import com.example.movieapp.di.NetworkModule_ProvideOkHttpClientFactory;
 import com.example.movieapp.di.NetworkModule_ProvideRetrofitFactory;
 import com.example.movieapp.di.NetworkModule_ProvideTmdbApiFactory;
 import com.example.movieapp.ui.screens.MovieDetailsViewModel;
@@ -45,6 +46,7 @@ import dagger.internal.SetBuilder;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
+import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 
 @DaggerGenerated
@@ -546,6 +548,8 @@ public final class DaggerMovieApplication_HiltComponents_SingletonC {
 
     private final SingletonCImpl singletonCImpl = this;
 
+    private Provider<OkHttpClient> provideOkHttpClientProvider;
+
     private Provider<Retrofit> provideRetrofitProvider;
 
     private Provider<TmdbApi> provideTmdbApiProvider;
@@ -566,9 +570,10 @@ public final class DaggerMovieApplication_HiltComponents_SingletonC {
 
     @SuppressWarnings("unchecked")
     private void initialize(final ApplicationContextModule applicationContextModuleParam) {
+      this.provideOkHttpClientProvider = DoubleCheck.provider(new SwitchingProvider<OkHttpClient>(singletonCImpl, 3));
       this.provideRetrofitProvider = DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonCImpl, 2));
       this.provideTmdbApiProvider = DoubleCheck.provider(new SwitchingProvider<TmdbApi>(singletonCImpl, 1));
-      this.provideAppDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<AppDatabase>(singletonCImpl, 3));
+      this.provideAppDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<AppDatabase>(singletonCImpl, 4));
       this.movieRepositoryProvider = DoubleCheck.provider(new SwitchingProvider<MovieRepository>(singletonCImpl, 0));
     }
 
@@ -612,9 +617,12 @@ public final class DaggerMovieApplication_HiltComponents_SingletonC {
           return (T) NetworkModule_ProvideTmdbApiFactory.provideTmdbApi(singletonCImpl.provideRetrofitProvider.get());
 
           case 2: // retrofit2.Retrofit 
-          return (T) NetworkModule_ProvideRetrofitFactory.provideRetrofit();
+          return (T) NetworkModule_ProvideRetrofitFactory.provideRetrofit(singletonCImpl.provideOkHttpClientProvider.get());
 
-          case 3: // com.example.movieapp.data.local.AppDatabase 
+          case 3: // okhttp3.OkHttpClient 
+          return (T) NetworkModule_ProvideOkHttpClientFactory.provideOkHttpClient();
+
+          case 4: // com.example.movieapp.data.local.AppDatabase 
           return (T) DatabaseModule_ProvideAppDatabaseFactory.provideAppDatabase(ApplicationContextModule_ProvideContextFactory.provideContext(singletonCImpl.applicationContextModule));
 
           default: throw new AssertionError(id);

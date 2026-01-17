@@ -24,4 +24,11 @@ interface TmdbApi {
         @retrofit2.http.Path("movie_id") movieId: Int,
         @Query("api_key") apiKey: String
     ): MovieDto
+
+    @GET("movie/{movie_id}/recommendations")
+    suspend fun getRecommendations(
+        @retrofit2.http.Path("movie_id") movieId: Int,
+        @Query("api_key") apiKey: String,
+        @Query("page") page: Int = 1
+    ): MovieResponse
 }

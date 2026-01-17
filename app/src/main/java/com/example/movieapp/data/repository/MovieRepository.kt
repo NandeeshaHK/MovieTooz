@@ -41,6 +41,15 @@ class MovieRepository @Inject constructor(
         }
     }
 
+    suspend fun getRecommendations(movieId: Int, page: Int = 1): Result<List<com.example.movieapp.data.model.MovieDto>> {
+        return try {
+            val response = api.getRecommendations(movieId = movieId, apiKey = BuildConfig.TMDB_API_KEY, page = page)
+            Result.success(response.results)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
     fun getFavourites(): Flow<List<MovieEntity>> = dao.getFavourites()
 
     fun getWatchlist(): Flow<List<MovieEntity>> = dao.getWatchlist()

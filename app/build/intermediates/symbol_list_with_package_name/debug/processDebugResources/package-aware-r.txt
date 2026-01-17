@@ -967,7 +967,6 @@ drawable ic_launcher
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable icon_background
-drawable movie_logo
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -981,7 +980,6 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
-drawable splash_logo
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1249,7 +1247,6 @@ id software
 id south
 id spacer
 id special_effects_controller_view_tag
-id splashAnimation
 id splashscreen_icon_view
 id spline
 id split_action_bar
@@ -1265,7 +1262,6 @@ id start
 id startHorizontal
 id startVertical
 id staticLayout
-id staticLogo
 id staticPostLayout
 id stop
 id submenuarrow
@@ -1360,7 +1356,6 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_splash
 layout custom_dialog
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity

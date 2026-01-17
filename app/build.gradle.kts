@@ -14,7 +14,7 @@ android {
         minSdk = 24
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.1"
         
         // Storing API key in BuildConfig for now (as per plan permissions)
         buildConfigField("String", "TMDB_API_KEY", "\"c2693a87b633a7f1869d8fd7d1e6a765\"")
@@ -100,4 +100,7 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+    
+    // Palette API for dynamic colors
+    implementation("androidx.palette:palette-ktx:1.0.0")
 }
